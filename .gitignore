@@ -1,3 +1,4 @@
 calculator.sublime-project
 calculator.sublime-workspace
 node_modules
+/public/**
