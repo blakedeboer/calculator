@@ -4,6 +4,7 @@ The purpose of this code is to get a hello-world app running using React, Babel,
 
 ### Setup and Run
 
-Run `$ npm install` to install all the node modules specified in package.json.
+First, run `$ npm install` to install all the node modules specified in package.json.
 
-Hot reload for webpack is not yet enabled. If you make a change to a file in the app directory, you need to manually run webpack to recompile. To rerun webpack, run the command `$ ./node_modules/.bin/webpack -d`
+Second, run `$ npm run dev` to start Webpack. This will recompile the code and start watching any changes to the files specified in the webpack config file. 
+
