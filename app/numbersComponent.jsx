@@ -1,11 +1,22 @@
 import React from 'react';
 
 class NumbersComponent extends React.Component {
-
+	handleClick (obj) {
+		console.log(obj);
+	}
 	render () {
-		var numbersButtons = [0, 1, 2, 3, 4, 5, 6, 7, 8 , 9].map((num) => {
+		let start = 0;
+		const numbers = [];
+		while (start <= 9) {
+			numbers.push({id: start, value: start});
+			start += 1;
+		}
+
+		var numbersButtons = numbers.map((num) => {
 			return (
-				<button ref='button'>{num}</button>
+				<div key={num.id}>
+					<button ref='button' onClick={this.handleClick}>{num.value}</button>
+				</div>
 			)
 		});
 		return (
