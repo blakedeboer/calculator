@@ -1,8 +1,9 @@
 import React from 'react';
 
-class NumbersComponent extends React.Component {
-	handleClick (obj) {
-		console.log(obj);
+class Numbers extends React.Component {
+	handleClick (value) {
+		console.log(value);
+		this.props.onInput(value);
 	}
 	render () {
 		let start = 0;
@@ -14,9 +15,7 @@ class NumbersComponent extends React.Component {
 
 		var numbersButtons = numbers.map((num) => {
 			return (
-				<div key={num.id}>
-					<button ref='button' onClick={this.handleClick}>{num.value}</button>
-				</div>
+				<button key={num.id} ref='button' onClick={this.handleClick.bind(this, num.value)}>{num.value}</button>
 			)
 		});
 		return (
@@ -28,4 +27,4 @@ class NumbersComponent extends React.Component {
 
 }
 
-export default NumbersComponent;
+export default Numbers;
